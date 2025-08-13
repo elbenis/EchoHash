@@ -1,0 +1,2 @@
+# EchoHash
+Another Hash Method
