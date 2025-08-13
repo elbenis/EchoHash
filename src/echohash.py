@@ -59,7 +59,7 @@ def EchoHash(secret):
             charResult = charResult + math.sin(pow(x, 12345, 10**9 + 7) % 360)
             charResult = charResult + math.exp(-abs(x % 50) / 25) * math.cos(x**2 + 1)
 
-        # final operations
+        # Final operations
         charResult = str(charResult)
         charResult = charResult.replace(".", "")
 
@@ -84,7 +84,7 @@ def EchoHash(secret):
 
         hash = hash + str(charResult)
 
-    # make it 128 characters
+    # Make it 128 characters
     base62chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
     seed = sum(ord(c) for c in hash) & 0xFFFFFFFFFFFFFFFF
