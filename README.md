@@ -5,8 +5,8 @@
 ---
 
 ⚠️ **Warning:**  
-This hash method is self-made and is **probably cryptographically shit**.  
-**Do not use it for any important stuff.**  
+This hash method is self-made and has **not been tested by experts for security**.  
+**Do not use it for very important stuff.**  
 Also, I am not a cryptography expert.
 
 ---
