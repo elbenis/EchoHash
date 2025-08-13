@@ -87,7 +87,11 @@ def EchoHash(secret):
     # Make it 128 characters
     base62chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
-    seed = sum(ord(c) for c in hash) & 0xFFFFFFFFFFFFFFFF
+    seed = 0
+    for i, c in enumerate(hash):
+        seed ^= (ord(c) << (i % 64))
+        seed = (seed * 0x5bd1e995) & 0xFFFFFFFFFFFFFFFF
+
 
     rng = random.Random(seed)
 
@@ -124,7 +128,7 @@ def manager():
     
     # Hash Testing (I use this for testing the hash method).
     if inp == 2:
-        passwords = []
+        passwords = ["password123", "password122", "password121", "passwo123", "passwords123"]
 
         for i in range(len(passwords)):
             print(EchoHash(passwords[i]))
