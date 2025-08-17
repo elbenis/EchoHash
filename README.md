@@ -1,6 +1,6 @@
 # EchoHash
 
-**Another Hash Method**
+**Yet Another Hash Method**
 
 ---
 
